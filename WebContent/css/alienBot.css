@@ -1,0 +1,259 @@
+@charset "ISO-8859-1";
+.wrapper {
+	width: calc(100vw - 100px);
+	margin: 0 auto 60px auto;
+}
+.grid {
+	display: grid;
+	grid-template-columns: 1fr 400px;
+	grid-template-rows: 100px 1fr;
+	grid-template-areas:
+	"chatbox intro"
+	"chatbox tips";
+}
+/*
+***************************************************************
+*/
+
+@font-face {
+  font-family: "AlienBot Display Ultralight";
+  font-style: normal;
+  font-weight: 400;
+  src: url(https://applesocial.s3.amazonaws.com/assets/styles/fonts/sanfrancisco/sanfranciscodisplay-ultralight-webfont.eot?#iefix) format("embedded-opentype"), url(https://applesocial.s3.amazonaws.com/assets/styles/fonts/sanfrancisco/sanfranciscodisplay-ultralight-webfont.woff2) format("woff2"), url(https://applesocial.s3.amazonaws.com/assets/styles/fonts/sanfrancisco/sanfranciscodisplay-ultralight-webfont.woff) format("woff"), url(https://applesocial.s3.amazonaws.com/assets/styles/fonts/sanfrancisco/sanfranciscodisplay-ultralight-webfont.ttf) format("truetype"), url("fonts/sanfrancisco/sanfranciscodisplay-ultralight-webfont.svg#San Francisco Display Ultralight") format("svg")
+}
+
+@font-face {
+  font-family: "AlienBot Display Medium";
+  font-style: normal;
+  font-weight: 400;
+  src: url(https://applesocial.s3.amazonaws.com/assets/styles/fonts/sanfrancisco/sanfranciscodisplay-medium-webfont.eot?#iefix) format("embedded-opentype"), url(https://applesocial.s3.amazonaws.com/assets/styles/fonts/sanfrancisco/sanfranciscodisplay-medium-webfont.woff2) format("woff2"), url(https://applesocial.s3.amazonaws.com/assets/styles/fonts/sanfrancisco/sanfranciscodisplay-medium-webfont.woff) format("woff"), url(https://applesocial.s3.amazonaws.com/assets/styles/fonts/sanfrancisco/sanfranciscodisplay-medium-webfont.ttf) format("truetype"), url("fonts/sanfrancisco/sanfranciscodisplay-medium-webfont.svg#San Francisco Display Medium") format("svg")
+}
+
+@font-face {
+  font-family: "AlienBot Display Bold";
+  font-style: normal;
+  font-weight: 400;
+  src: url(https://applesocial.s3.amazonaws.com/assets/styles/fonts/sanfrancisco/sanfranciscodisplay-bold-webfont.eot?#iefix) format("embedded-opentype"), url(https://applesocial.s3.amazonaws.com/assets/styles/fonts/sanfrancisco/sanfranciscodisplay-bold-webfont.woff2) format("woff2"), url(https://applesocial.s3.amazonaws.com/assets/styles/fonts/sanfrancisco/sanfranciscodisplay-bold-webfont.woff) format("woff"), url(https://applesocial.s3.amazonaws.com/assets/styles/fonts/sanfrancisco/sanfranciscodisplay-bold-webfont.ttf) format("truetype"), url("fonts/sanfrancisco/sanfranciscodisplay-bold-webfont.svg#San Francisco Display Bold") format("svg")
+}
+
+
+
+
+
+
+
+
+/*
+*******************************************************************************************
+*/
+
+
+/*
+__________________STYLE___FOR___CHATBOX____________________
+*/
+
+.chatbox {
+	grid-area: chatbox;
+}
+.chatbox .wrapperchatbox {
+	margin: 0 auto;
+	text-align: center;
+}
+/* --------------------------------- */
+.chatbox .wrapperchatbox .containbox {
+	position: relative;
+	height: calc(100vh - 250px);
+	height: auto;
+	overflow: hidden;
+}
+
+
+/* ----------------------- chat logs --------------------- */
+.chatbox .wrapperchatbox .containbox .chatbox-logs {
+  padding: 10px; 
+  height: calc(100vh - 260px);
+  overflow-y:scroll;
+}
+
+.chatbox .wrapperchatbox .containbox .chatbox-logs::-webkit-scrollbar-track {
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+	background-color: #ebf3eb;
+}
+
+.chatbox .wrapperchatbox .containbox .chatbox-logs::-webkit-scrollbar {
+	width: 5px;  
+	background-color: #b1d1b2;
+}
+
+.chatbox .wrapperchatbox .containbox .chatbox-logs::-webkit-scrollbar-thumb {
+	background-color: #4f9753;
+}
+
+
+/* --------------------------------- */
+.chatbox .wrapperchatbox .inforbox {
+	height: 30px;
+	background-color: #ebf3eb;
+	text-align: center;
+	line-height: 30px;
+	color: #3c8c40;
+}
+
+
+/* ---------------------------------- */
+.chatbox .wrapperchatbox .enterbox {
+	height: 100px;
+}
+.chatbox .wrapperchatbox .enterbox > form {
+	margin-bottom: 0;
+	display: flex;
+	
+}
+.chatbox .wrapperchatbox .enterbox #chat-input {
+  width:100%; 
+  position:relative;
+  height:100px;
+  text-align: center;
+  line-height: 100px; 
+  border-right-width: 0;
+  border-left-width: 0;
+  flex: 1;
+  padding-right: 20px;
+  font-size: 29px;  
+  outline:none;
+  color: #3c8c40;
+  border-top:none;
+  overflow:hidden;
+}
+.chatbox .wrapperchatbox .enterbox #chat-input::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+  color: #ccc;
+}
+.chatbox .wrapperchatbox .enterbox #chat-input::-moz-placeholder { /* Firefox 19+ */
+  color: #ccc;
+}
+.chatbox .wrapperchatbox .enterbox #chat-input:-ms-input-placeholder { /* IE 10+ */
+  color: #ccc;
+}
+.chatbox .wrapperchatbox .enterbox #chat-input:-moz-placeholder { /* Firefox 18- */
+  color: #ccc;
+}
+
+
+.chatbox .wrapperchatbox .enterbox .chat-submit {  
+  background-color: #ebf3eb;
+  box-shadow:2px 2px 10px #3c8c40;
+  border: none;
+  border-radius: 50%;
+  color: #3c8c40;
+  margin: 20px;
+  width: 60px;
+  height: 60px;  
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+
+
+
+
+/*
+__________________STYLE___FOR___INTRO____________________
+*/
+
+.intro {
+	grid-area: intro;
+}
+.intro .wrapperintro {
+	margin: 5px auto;
+	text-align: center;
+	height: 95px;
+}
+.intro .wrapperintro h2, .intro .wrapperintro h6 {
+	
+}
+.intro .wrapperintro h2 {
+	font-family: AlienBot Display Bold;
+	font-size: 50px;
+	font-weight: 600;
+	color: #fff;
+	text-align: center;
+	text-shadow: 2px 2px #3c8c40;
+	text-transform: uppercase;
+}
+.intro .wrapperintro h6 {
+	font-family: "AlienBot Display Ultralight";
+	font-size: 20px;
+	color: #3c8c40;
+}
+
+
+/*
+__________________STYLE___FOR___TIPS____________________
+*/
+.tips {
+	grid-area: tips;
+}
+.tips .wrappertips {
+	text-align: center;
+	height: calc(100vh - 230px);
+	padding: 5px 10px;
+}
+.tips .wrappertips h4 {
+	font-family: AlienBot Display Medium;
+	font-size: 50px;
+	color: #3c8c40;
+	
+}
+
+.tips .wrappertips h6 {
+	font-family: "AlienBot Display Ultralight";
+	font-size: 20px;
+	color: #3c8c40;
+}
+
+
+
+/* ------*-*-*-*--*-**-*- */
+
+
+.chat-msg.user > .msg-avatar img {
+  width:45px;
+  height:45px;
+  border-radius:50%;
+  float:left;
+  width:15%;
+}
+.chat-msg.self > .msg-avatar img {
+  width:45px;
+  height:45px;
+  border-radius:50%;
+  float:right;
+  width:15%;
+}
+.cm-msg-text {
+  background:#ebf3eb;
+  padding:10px 15px 10px 15px;  
+  color:#666;
+  max-width:75%;
+  float:left;
+  margin-left:10px; 
+  position:relative;
+  margin-bottom:20px;
+  border-radius:30px;
+}
+.chat-msg {
+  clear:both;    
+}
+.chat-msg.self > .cm-msg-text {  
+  float:right;
+  margin-right:10px;
+  background: #3c8c40;
+  color:white;
+}
+
+
+
+
+
+
+
